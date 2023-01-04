@@ -39,12 +39,23 @@ header, main, section {
     font-size: 1.2em;
 }
 
+.input-mensagem:focus {
+    outline: none;
+    border: 1px solid #0A3871;
+}
+
 .field-submit {
     margin-top: 15%;
 }
 
 .field-submit legend {
     margin-bottom: 1em;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 400;
+    color: #495057;
+    opacity: 0.8;
+    vertical-align: middle;
 }
 
 .botao-criptografar {
