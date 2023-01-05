@@ -5,21 +5,22 @@ body {
 }
 
 header {
-    margin: 40px 0 0 40px;
-    width: 69%;
+    margin: 40px 40px 0 40px;
+}
+
+.header-titulo {
+    font-size: 2.5em;
+    font-weight: bold;
+    padding-left: 2em;
+    color: #0A3871;
 }
 
 main {
-    width: 69%;
     margin: 0 auto;
 }
 
-header, main, section {
-    display: inline-block;
-}
-
 .recebe-texto {
-    margin-left: 100px;
+    margin-left: 2em;
     padding: 80px;
 }
 
@@ -29,14 +30,14 @@ header, main, section {
     /* padding: 1em 0.5em; */
     background: #F3F5FC;
     border: none;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #0A3871;
     /* font-size: 32px; */
 }
 
 .input-mensagem::placeholder {
     color: #0A3871;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .input-mensagem:focus {
@@ -45,7 +46,7 @@ header, main, section {
 }
 
 .field-submit {
-    margin-top: 15%;
+    margin-top: 10%;
 }
 
 .field-submit legend {
@@ -78,6 +79,28 @@ header, main, section {
     border: 1px solid #0A3871;
 }
 .exibe-texto {
-    width: 300px;
+    width: 400px;
+    border-radius: 32px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    right: 32px;
+    padding: 10% 32px 0;
+    color: #343A40;
 }
 
+.exibe-texto h2 {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 1.5em 1em;
+    text-align: center;
+}
+
+
+.exibe-texto p {
+    margin-top: 16px;
+    color: #495057;
+    padding: 0 1.5em;
+    margin-bottom: 10%;
+}

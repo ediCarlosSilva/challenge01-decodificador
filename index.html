@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <h1 class="header-titulo"><img src="img/logo.png" alt="Logo Alura Latam"></h1>
+        <h1 class="header-titulo">Edi decoder</h1>
     </header>
     
     <main>
@@ -23,16 +23,19 @@
                 <textarea id="mensagem" cols="70" rows="10" class="input-mensagem" required placeholder="Digite seu texto"></textarea>
 
                 <fieldset class="field-submit">
-                    <legend><img src="img/sinal-de-exclamacao.png" alt=""> Apenas letras minúsculas e sem acento.</legend>
+                    <legend><img src="img/sinal-de-exclamacao.png" alt="Regra para Criptografar"> Apenas letras minúsculas e sem acento.</legend>
                     <input type="submit" value="Criptografar" class="botao-criptografar">
                     <input type="submit" value="Descriptografar" class="botao-descriptografar">
                 </fieldset>
             </form>
         </section>
 
-        <!-- <section class="exibe-texto">
-            <h2>Texto Criptografado</h2>
-        </section> -->
+        <section class="exibe-texto">
+            <img src="img/inspecionador.png" alt="Imagem de uma Pessoa inspecionando um texto.">
+            <h2>Nenhuma mensagem encontrada</h2>
+            <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+        </section>
     </main>
+    <script src="js/index.js"></script>
 </body>
 </html>
