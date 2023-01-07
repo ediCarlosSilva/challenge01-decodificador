@@ -36,8 +36,6 @@ function criptografar(event) {
         }
     }
 
-    // console.log(textoCriptografado.join(''));
-    //console.log(textareaTextoInformado);
     textareaTextoAnalisado.value = textoCriptografado.join('');
     textareaTextoAnalisado.style.display = 'inline-block';
     personagem.style.display = 'none';
@@ -49,10 +47,7 @@ function descriptografar(event) {
 
     event.preventDefault();
 
-    // alert("Eita, Fui Descripto Clicado!");
-
     let textoCriptografado = textareaTextoInformado.value;
-    // console.log(textoCriptografado);
 
     let textoDescriptografado;
 
@@ -63,8 +58,6 @@ function descriptografar(event) {
                                                 .replaceAll('ufat', 'u');
 
     textareaTextoAnalisado.value = textoDescriptografado;
-
-    // console.log(textoDescriptografado);
 
     personagem.style.display = 'none';
     formularioTextoAnalisado.style.display = 'block';

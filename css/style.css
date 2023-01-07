@@ -181,4 +181,8 @@ footer p {
         margin: 0 auto;
     }
 
+    footer p {
+        font-size: 1.5em;
+    }
+
 }
