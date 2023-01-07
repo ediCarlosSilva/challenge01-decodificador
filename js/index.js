@@ -1,6 +1,6 @@
 function criptografar() {
     alert("Opa, Fui clicado.");
-    alert(textoInformado.value);
+    alert("Texto informado: " + textoInformado.value);
 
 }
 
