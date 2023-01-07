@@ -3,26 +3,19 @@ function $(id) {
 }
 
 function criptografar(event) {
-    // console.log(event);
+
     event.preventDefault();
 
-    // alert("Texto informado: " + textoInformado.value);
-
-    // pega o elemento textarea do dom 
-    let textoInformado = $("#texto-informado");
     let textoCriptografado = [];
 
     // converte o texto informado para minuscula.
-    textoInformado = textoInformado.value.toLowerCase();
+    let textoinformado = textareaTextoInformado.value.toLowerCase();
 
-    for (let i = 0; i < textoInformado.length; i++) {
-        // if (textoInformado.charAt(i) === "a") {
-        //     textoCriptografado.push("ai");
-        // } else {
-        //     textoCriptografado.push(text[i]);
-        // }
+    // laço for para percorrer o texto informado
+    for (let i = 0; i < textoinformado.length; i++) {
 
-        switch(textoInformado[i]) {
+        // um switch case para analisar cada indice do array do texto informado e trocando para a palavra chave correspondente a cada letra.
+        switch(textoinformado[i]) {
             case "a" :
                 textoCriptografado.push("ai");
                 break;
@@ -39,29 +32,54 @@ function criptografar(event) {
                 textoCriptografado.push("ufat");
                 break;
             default :
-                textoCriptografado.push(textoInformado[i]); 
+                textoCriptografado.push(textoinformado[i]); 
         }
     }
 
-
-
-    // As "chaves" de criptografia que utilizaremos são:
-    // `A letra "e" é convertida para "enter"`
-    // `A letra "i" é convertida para "imes"`
-    // `A letra "a" é convertida para "ai"`
-    // `A letra "o" é convertida para "ober"`
-    // `A letra "u" é convertida para "ufat"`
-
-    // Por exemplo:
-    // `"gato" => "gaitober"`
-    // `gaitober" => "gato"`
+    // console.log(textoCriptografado.join(''));
+    //console.log(textareaTextoInformado);
+    textareaTextoAnalisado.value = textoCriptografado.join('');
+    textareaTextoAnalisado.style.display = 'inline-block';
+    personagem.style.display = 'none';
+    formularioTextoAnalisado.style.display = 'block';
     
-    console.log(textoCriptografado.join(''));
-    //console.log(textoInformado);
 }
 
+function descriptografar(event) {
 
+    event.preventDefault();
+
+    // alert("Eita, Fui Descripto Clicado!");
+
+    let textoCriptografado = textareaTextoInformado.value;
+    // console.log(textoCriptografado);
+
+    let textoDescriptografado;
+
+    textoDescriptografado = textoCriptografado.replaceAll("ai", "a")
+                                                .replaceAll("enter", "e")
+                                                .replaceAll('imes', 'i')
+                                                .replaceAll('ober', 'o')
+                                                .replaceAll('ufat', 'u');
+
+    textareaTextoAnalisado.value = textoDescriptografado;
+
+    // console.log(textoDescriptografado);
+
+    personagem.style.display = 'none';
+    formularioTextoAnalisado.style.display = 'block';
+    textareaTextoAnalisado.style.display = 'inline-block';
+
+}
 
 let botaoCriptografar = $("#btn-criptografar");
+let botaoDescriptografar = $("#btn-descriptografar");
+let botaoCopiar = $("#btn-copiar");
+
+let textareaTextoInformado = $("#texto-informado");
+let textareaTextoAnalisado = $("#textarea-texto-analisado");
+let formularioTextoAnalisado = $('.exibe-texto form');
+let personagem = $(".personagem");
 
 botaoCriptografar.addEventListener('click', criptografar);
+botaoDescriptografar.addEventListener('click', descriptografar);
