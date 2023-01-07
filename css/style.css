@@ -90,7 +90,7 @@ main {
 }
 
 .exibe-texto .personagem {
-    display: none;
+    /* display: none; */
 }
 
 #texto-analisado {
@@ -100,6 +100,7 @@ main {
     font-size: 1.2em;
     color: #0A3871;
     padding: 2px 0.5em;
+    display: none;
 }
 
 #texto-analisado:focus {
