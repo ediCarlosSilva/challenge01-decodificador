@@ -20,22 +20,26 @@
         <section class="recebe-texto">
             <form>
 
-                <textarea id="mensagem" cols="70" rows="10" class="input-mensagem" required placeholder="Digite seu texto"></textarea>
+                <textarea id="texto-informado" cols="70" rows="10" class="input-mensagem" required placeholder="Digite seu texto"></textarea>
 
                 <fieldset class="field-submit">
                     <legend><img src="img/sinal-de-exclamacao.png" alt="Regra para Criptografar"> Apenas letras minúsculas e sem acento.</legend>
-                    <input type="submit" value="Criptografar" class="botao-criptografar">
+                    <input type="submit" value="Criptografar" class="botao-criptografar" id="btn-criptografar">
                     <input type="submit" value="Descriptografar" class="botao-descriptografar">
                 </fieldset>
             </form>
         </section>
 
         <section class="exibe-texto">
-            <img src="img/inspecionador.png" alt="Imagem de uma Pessoa inspecionando um texto.">
+            <textarea name="texto-analisado" id="texto-analisado" cols="10" rows="3"></textarea>
+            <img src="img/inspecionador.png" alt="Imagem de uma Pessoa inspecionando um texto." class="personagem">
             <h2>Nenhuma mensagem encontrada</h2>
             <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
         </section>
     </main>
+    <footer>
+        <p>Desenvolvido por Edi Carlos</p>
+    </footer>
     <script src="js/index.js"></script>
 </body>
 </html>

@@ -89,6 +89,24 @@ main {
     color: #343A40;
 }
 
+.exibe-texto .personagem {
+    display: none;
+}
+
+#texto-analisado {
+    width: 100%;
+    background: #F3F5FC;
+    border: none;
+    font-size: 1.2em;
+    color: #0A3871;
+    padding: 2px 0.5em;
+}
+
+#texto-analisado:focus {
+    outline: none;
+    border: 1px solid #0A3871;
+}
+
 .exibe-texto h2 {
     margin-top: 32px;
     font-weight: 700;
@@ -103,4 +121,15 @@ main {
     color: #495057;
     padding: 0 1.5em;
     margin-bottom: 10%;
+}
+
+footer {
+    width: 70%;
+    margin: 0 auto;
+}
+
+footer p {
+    text-align: right;
+    color: #0A3871;
+    margin-bottom: 1.5em;
 }
