@@ -17,6 +17,7 @@ header {
 
 main {
     margin: 0 auto;
+    display: inline-block;
 }
 
 .recebe-texto {
@@ -89,9 +90,9 @@ main {
     color: #343A40;
 }
 
-.exibe-texto .personagem {
-    /* display: none; */
-}
+/* .exibe-texto .personagem {
+    display: none;
+} */
 
 #texto-analisado {
     width: 100%;
@@ -133,4 +134,15 @@ footer p {
     text-align: right;
     color: #0A3871;
     margin-bottom: 1.5em;
+}
+
+
+
+@media screen and (max-width: 480px) { 
+
+    .exibe-texto {
+        position: static;
+        margin: 0 auto;
+    }
+
 }

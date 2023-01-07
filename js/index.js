@@ -1,4 +1,6 @@
-function criptografar() {
+function criptografar(event) {
+    // console.log(event);
+    // event.preventDefault();
     alert("Opa, Fui clicado.");
     alert("Texto informado: " + textoInformado.value);
 
