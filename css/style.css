@@ -137,6 +137,20 @@ footer p {
 }
 
 
+@media screen and (max-width: 980px) { 
+
+    .exibe-texto {
+        position: static;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .personagem {
+        text-align: center;
+    }
+
+}
+
 
 @media screen and (max-width: 480px) { 
 
