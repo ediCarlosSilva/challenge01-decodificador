@@ -75,6 +75,12 @@ function copiar(event) {
 
 }
 
+function ajustar(event) {
+    event.preventDefault();
+    mensagemTextoCopiado.style.visibility = "hidden";
+    textareaTextoInformado.value = '';
+}
+
 // Criando e inicializando as váriaveis referentes aos botões da página
 let botaoCriptografar = $("#btn-criptografar");
 let botaoDescriptografar = $("#btn-descriptografar");
@@ -91,3 +97,5 @@ let personagem = $(".personagem");
 botaoCriptografar.addEventListener('click', criptografar);
 botaoDescriptografar.addEventListener('click', descriptografar);
 botaoCopiar.addEventListener('click', copiar);
+
+textareaTextoInformado.addEventListener('focus', ajustar);
