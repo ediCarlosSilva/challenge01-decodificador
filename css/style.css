@@ -126,6 +126,10 @@ main {
     /* background-color: white */
 }
 
+#textarea-texto-analisado::-moz-selection {
+    background-color: white;
+}
+
 #textarea-texto-analisado::selection {
     background-color: white;
 }
