@@ -122,7 +122,12 @@ main {
 
 #textarea-texto-analisado:focus {
     outline: none;
-    border: 1px solid #0A3871;
+    /* border: 1px solid #0A3871; */
+    /* background-color: white */
+}
+
+#textarea-texto-analisado::selection {
+    background-color: white;
 }
 
 .botao-copiar {
