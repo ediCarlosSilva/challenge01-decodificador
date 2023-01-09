@@ -71,7 +71,7 @@ function copiar(event) {
 
     textareaTextoAnalisado.select();
     document.execCommand("copy");
-    textareaTextoAnalisado.value = '';
+    mensagemTextoCopiado.style.visibility = "visible";
 
 }
 
@@ -84,6 +84,7 @@ let botaoCopiar = $("#btn-copiar");
 let textareaTextoInformado = $("#texto-informado");
 let textareaTextoAnalisado = $("#textarea-texto-analisado");
 let formularioTextoAnalisado = $('.exibe-texto form');
+let mensagemTextoCopiado = $('.exibe-texto form legend');
 let personagem = $(".personagem");
 
 // Associando o evento click com suas respectivas funções aos botões da página

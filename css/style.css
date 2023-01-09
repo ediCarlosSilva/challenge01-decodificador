@@ -101,6 +101,13 @@ main {
     display: none;
 }
 
+.exibe-texto form legend {
+    color: green;
+    font-weight: bold;
+    visibility: hidden; 
+    margin: 1em 0 0 1em;
+}
+
 #textarea-texto-analisado {
     width: 100%;
     height: 288px;
@@ -127,7 +134,7 @@ main {
     color: #0A3871;
     border: 1px solid #0A3871;
     display: block;
-    margin: 45% auto 0;
+    margin: 38% auto 0;
     font-size: 1em;
 }
 
