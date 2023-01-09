@@ -1,5 +1,5 @@
-function $(id) {
-    return document.querySelector(id);
+function $(elementoDom) {
+    return document.querySelector(elementoDom);
 }
 
 function criptografar(event) {
@@ -65,14 +65,28 @@ function descriptografar(event) {
 
 }
 
+function copiar(event) {
+
+    event.preventDefault();
+
+    textareaTextoAnalisado.select();
+    document.execCommand("copy");
+    textareaTextoAnalisado.value = '';
+
+}
+
+// Criando e inicializando as váriaveis referentes aos botões da página
 let botaoCriptografar = $("#btn-criptografar");
 let botaoDescriptografar = $("#btn-descriptografar");
 let botaoCopiar = $("#btn-copiar");
 
+// Variáveis referente as caixas de entrada 'textarea'
 let textareaTextoInformado = $("#texto-informado");
 let textareaTextoAnalisado = $("#textarea-texto-analisado");
 let formularioTextoAnalisado = $('.exibe-texto form');
 let personagem = $(".personagem");
 
+// Associando o evento click com suas respectivas funções aos botões da página
 botaoCriptografar.addEventListener('click', criptografar);
 botaoDescriptografar.addEventListener('click', descriptografar);
+botaoCopiar.addEventListener('click', copiar);
