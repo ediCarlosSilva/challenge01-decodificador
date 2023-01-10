@@ -164,7 +164,7 @@ main {
 }
 
 footer {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -172,6 +172,7 @@ footer p {
     text-align: right;
     color: #0A3871;
     margin-top: 1.5em;
+    padding-right: 1em;
 }
 
 
@@ -195,6 +196,14 @@ footer p {
     .exibe-texto {
         position: static;
         margin: 0 auto;
+    }
+
+    #texto-informado {
+        width: 100%;
+    }
+
+    .recebe-texto {
+        padding: 1em;
     }
 
     footer p {
