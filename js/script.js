@@ -54,31 +54,41 @@ function descriptografar(event) {
 
     event.preventDefault();
 
-    let textoCriptografado = textareaTextoInformado.value;
-
-    // if (textareaTextoInformado.value == false) {
-        
-    //     textareaTextoInformado.value = "Prezado amigo usuário. O senhor não informou nenhum texto Criptografado. Você pode Descriptografar esse texto:"
-    //      + "\n\n" + 
-    //      "prenterzaidober aimimesgober ufatsufatárimesober. imesnfoberrmenter ufatm tenterxtober crimesptobergraifaidober pairai denterscrimesptobergraifair. :)" + "\n\n" + "Caso queira é só clicar no botão descriptografar. :)"
-
-    //     return;
-    // }
-
+    let textoCriptografado;
     let textoDescriptografado;
 
+    // Verifica se textarea está vazia
+    if (textareaTextoInformado.value == false) {
+        
+        textareaTextoInformado.value = "Prezado amigo usuário. O senhor não informou nenhum texto Criptografado. Você pode Descriptografar esse texto:"
+         + "\n\n" + 
+         "prenterzaidober aimimesgober ufatsufatárimesober. imesnfoberrmenter ufatm tenterxtober crimesptobergraifaidober pairai denterscrimesptobergraifair. :)" + "\n\n" + "Caso queira é só clicar no botão descriptografar. :)"
+
+         jaTentou = true;
+        return;
+    }
+
+    // se já Tentou Descriptografar e estava vazia e tentou com o texto sugerido então atribui texto criptografado à variavel a ser utilizada.
+    if (jaTentou) {
+        textoCriptografado = "prenterzaidober aimimesgober ufatsufatárimesober. imesnfoberrmenter ufatm tenterxtober crimesptobergraifaidober pairai denterscrimesptobergraifair. :)";
+        jaTentou = false;
+    } else {
+        textoCriptografado = textareaTextoInformado.value;
+        // jaTentou = false;
+    }
+    
     textoDescriptografado = textoCriptografado.replaceAll("ai", "a")
-                                                .replaceAll("enter", "e")
-                                                .replaceAll('imes', 'i')
-                                                .replaceAll('ober', 'o')
-                                                .replaceAll('ufat', 'u');
-
+    .replaceAll("enter", "e")
+    .replaceAll('imes', 'i')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
+    
     textareaTextoAnalisado.value = textoDescriptografado;
-
+    
     personagem.style.display = 'none';
     formularioTextoAnalisado.style.display = 'block';
     textareaTextoAnalisado.style.display = 'inline-block';
-
+    
 }
 
 function copiar(event) {
@@ -109,9 +119,13 @@ let formularioTextoAnalisado = $('.exibe-texto form');
 let mensagemTextoCopiado = $('.exibe-texto form legend');
 let personagem = $(".personagem");
 
+// variavel para lógica de validação de descriptografar com textarea vazia.
+let jaTentou;
+
 // Associando o evento click com suas respectivas funções aos botões da página
 botaoCriptografar.addEventListener('click', criptografar);
 botaoDescriptografar.addEventListener('click', descriptografar);
 botaoCopiar.addEventListener('click', copiar);
 
 textareaTextoInformado.addEventListener('focus', ajustar);
+
