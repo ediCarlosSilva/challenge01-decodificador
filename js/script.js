@@ -11,6 +11,13 @@ function criptografar(event) {
     // converte o texto informado para minuscula.
     let textoinformado = textareaTextoInformado.value.toLowerCase();
 
+    if (textareaTextoInformado.value == false) {
+        
+        textareaTextoInformado.value = 'Prezado amigo usuário. O senhor não informou nenhum texto. Você pode criptografar esse texto, caso queira. É só clicar no botão criptografar. :)'
+
+        return;
+    }
+
     // laço for para percorrer o texto informado
     for (let i = 0; i < textoinformado.length; i++) {
 
@@ -48,6 +55,15 @@ function descriptografar(event) {
     event.preventDefault();
 
     let textoCriptografado = textareaTextoInformado.value;
+
+    // if (textareaTextoInformado.value == false) {
+        
+    //     textareaTextoInformado.value = "Prezado amigo usuário. O senhor não informou nenhum texto Criptografado. Você pode Descriptografar esse texto:"
+    //      + "\n\n" + 
+    //      "prenterzaidober aimimesgober ufatsufatárimesober. imesnfoberrmenter ufatm tenterxtober crimesptobergraifaidober pairai denterscrimesptobergraifair. :)" + "\n\n" + "Caso queira é só clicar no botão descriptografar. :)"
+
+    //     return;
+    // }
 
     let textoDescriptografado;
 
